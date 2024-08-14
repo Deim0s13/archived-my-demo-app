@@ -120,4 +120,3 @@ The backend API provides the following endpoints for managing items:
   DB_HOST=<your-db-hostname>
   DB_PORT=<your-db-port>
   ```
-  
