@@ -114,9 +114,10 @@ The backend API provides the following endpoints for managing items:
   2. Add the following variables to the `.env` file:
 
   ```env
-  DB_USER=user
-  DB_PASSWORD=password
-  DB_NAME=mydemoapp
-  DB_HOST=db
-  DB_PORT=5432
+  DB_USER=<your-db-username>
+  DB_PASSWORD=<your-db-password>
+  DB_NAME=<your-db-name>
+  DB_HOST=<your-db-hostname>
+  DB_PORT=<your-db-port>
   ```
+  
