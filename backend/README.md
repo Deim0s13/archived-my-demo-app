@@ -105,3 +105,18 @@ The backend API provides the following endpoints for managing items:
   ```bash
   curl -X GET http://localhost:3000/items
   ```
+
+  ### Environment Variables
+
+  This project uses environment variables to manage sensitive information such as database credentials
+
+  1. Create a `.env` file in the `backend` folder.
+  2. Add the following variables to the `.env` file:
+
+  ```env
+  DB_USER=user
+  DB_PASSWORD=password
+  DB_NAME=mydemoapp
+  DB_HOST=db
+  DB_PORT=5432
+  ```
