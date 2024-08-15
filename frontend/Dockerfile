@@ -10,9 +10,9 @@ RUN npm install
 
 # Copy the rest of the application and build it
 COPY . .
-RUN rpm run build
+RUN npm run build
 
-# Use the offical Nginx image to serve the application
+# Use the official Nginx image to serve the application
 FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
