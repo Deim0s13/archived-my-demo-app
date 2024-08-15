@@ -11,24 +11,6 @@ My Demo App is a simple web application that demonstrates basic CRUD operations 
 - Docker Compose
 - Podman
 
-## Project Structure
-
-my-demo-app/
-├── backend/
-│   ├── index.js
-│   ├── package.json
-│   ├── Dockerfile
-│   └── .env
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   ├── Dockerfile
-│   ├── package.json
-│   └── README.md
-├── .env
-├── docker-compose.yaml
-└── README.md
-
 ## Environments
 
 ### Development Environment
