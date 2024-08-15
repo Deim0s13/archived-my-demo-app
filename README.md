@@ -14,13 +14,74 @@ My Demo App is a simple web application that demonstrates basic CRUD operations 
 ## Project Structure
 
 my-demo-app/
-|---backend/                # Contains the Node.js backend code
-    |---index.js            # Main application file for the backend
-    |---package.json        # Node.js dependencies
-    |---Dockerfile          # Dockerfile for building the backend container
-|---.env                    # Environment variables for Docker Compose
-|---docker-compose.yaml     # Configuration for Docker Compose
-|---README.md               # Project Documentation
+├── backend/           # Backend service code and configuration
+│   ├── index.js       # Main entry point for the Node.js backend
+│   ├── package.json   # Node.js dependencies for the backend
+│   ├── Dockerfile     # Dockerfile for building the backend container
+│   └── .env           # Environment variables for the backend (not committed to version control)
+├── frontend/          # Frontend service code and configuration
+│   ├── public/        # Static assets for the frontend
+│   ├── src/           # Source code for the React frontend
+│   ├── Dockerfile     # Dockerfile for building the frontend container
+│   ├── package.json   # Node.js dependencies for the frontend
+│   └── README.md      # Documentation specific to the frontend
+├── .env               # Environment variables for Docker Compose
+├── docker-compose.yaml # Docker Compose configuration for managing the containers
+└── README.md          # Main project documentation
+
+## Environments
+
+### Development Environment
+
+During development, we use Podman to containerize the application and run all services locally.
+
+1. **Start the application:**
+
+   - Run the following command from the root of the project:
+     ```bash
+     podman-compose up --build
+     ```
+
+2. **Access the application:**
+
+   - **Frontend:** `http://localhost:8080`
+   - **Backend API:** `http://localhost:3000/items`
+
+3. **Development Workflow:**
+
+   - Any changes made to the frontend or backend code will require rebuilding the containers to reflect those changes in the running environment:
+
+     ```bash
+     podman-compose up --build
+     ```
+
+### Simulating Non-Production Environment (CRC)
+
+The application can be deployed to a CRC cluster to simulate a non-production environment.
+
+1. **Deploy the application:**
+   - Push your container images to a container registry accessible by your CRC environment.
+   - Create the necessary Kubernetes or OpenShift resources (e.g., Deployment, Service, Route) to deploy your application.
+
+2. **Access the application:**
+   - The application will be accessible through the routes defined in your OpenShift or Kubernetes setup.
+
+3. **Testing and Validation:**
+   - Use this environment to conduct more thorough testing, such as load testing, integration testing with other services, and validating the behavior of your application in a more production-like setting.
+
+### Production Environment (ROSA)
+
+When the application is ready for simulating production, it can be deployed to a ROSA cluster.
+
+1. **Deploy the application:**
+   - Use CI/CD pipelines to automate the deployment process, ensuring that the production environment always reflects the latest stable code.
+   - Apply best practices for security, such as using OpenShift Secrets to manage sensitive information, and configure scaling policies.
+
+2. **Monitor and Maintain:**
+   - Use OpenShift's monitoring and logging tools to keep track of the application's performance and quickly address any issues.
+
+3. **Access the application:**
+   - The application will be available through a production-ready route, secured with SSL/TLS.
 
 ## Setup and Installation
 
