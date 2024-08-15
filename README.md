@@ -14,20 +14,20 @@ My Demo App is a simple web application that demonstrates basic CRUD operations 
 ## Project Structure
 
 my-demo-app/
-├── backend/           # Backend service code and configuration
-│   ├── index.js       # Main entry point for the Node.js backend
-│   ├── package.json   # Node.js dependencies for the backend
-│   ├── Dockerfile     # Dockerfile for building the backend container
-│   └── .env           # Environment variables for the backend (not committed to version control)
-├── frontend/          # Frontend service code and configuration
-│   ├── public/        # Static assets for the frontend
-│   ├── src/           # Source code for the React frontend
-│   ├── Dockerfile     # Dockerfile for building the frontend container
-│   ├── package.json   # Node.js dependencies for the frontend
-│   └── README.md      # Documentation specific to the frontend
-├── .env               # Environment variables for Docker Compose
-├── docker-compose.yaml # Docker Compose configuration for managing the containers
-└── README.md          # Main project documentation
+├── backend/
+│   ├── index.js
+│   ├── package.json
+│   ├── Dockerfile
+│   └── .env
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── README.md
+├── .env
+├── docker-compose.yaml
+└── README.md
 
 ## Environments
 
@@ -69,7 +69,7 @@ The application can be deployed to a CRC cluster to simulate a non-production en
 3. **Testing and Validation:**
    - Use this environment to conduct more thorough testing, such as load testing, integration testing with other services, and validating the behavior of your application in a more production-like setting.
 
-### Production Environment (ROSA)
+### Simulating Production Environment (ROSA)
 
 When the application is ready for simulating production, it can be deployed to a ROSA cluster.
 
