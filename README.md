@@ -78,9 +78,9 @@ cd my-demo-app
 
 Create a .env file in the root directory of the project with the following content:
 
-POSTGRES_USER=<your-db-username>
-POSTGRES_PASSWORD=<your-db-password>
-POSTGRES_DB=mydemoapp<your-db-name>
+POSTGRES_USER="your-db-username"
+POSTGRES_PASSWORD="your-db-password"
+POSTGRES_DB="your-db-name"
 
 3. **Start the application**
 
@@ -93,28 +93,3 @@ podman-compose up --build
 4. **Verify the setup:**
 
 Once the services are up and running, test the backend by accessing http://localhost:3000/items in your browser or using 'curl'
-
-## API Endpoints
-
-The backend provides the following API endpoints:
-
-1. **GET /items**
-   - **Description:** Retrieves the list of all items.
-   - **Example:**
-     ```bash
-     curl http://localhost:3000/items
-     ```
-
-2. **POST /items**
-   - **Description:** Creates a new item.
-   - **Example:**
-     ```bash
-     curl -X POST http://localhost:3000/items -H "Content-Type: application/json" -d '{"name":"New Item"}'
-     ```
-
-3. **DELETE /items/:id**
-   - **Description:** Deletes an item by its ID.
-   - **Example:**
-     ```bash
-     curl -X DELETE http://localhost:3000/items/1
-     ```
