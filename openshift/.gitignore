@@ -1,0 +1,6 @@
+# Ignore secret files
+openshift/db-secret.yaml
+
+# Other ignored files and directories
+node_modules/
+.env
