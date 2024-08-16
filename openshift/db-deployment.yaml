@@ -15,14 +15,17 @@ spec:
         app: db
     spec:
       securityContext:
-        fsGroup: 26
+        allowPrivilegedEscalation: false
       containers:
       - name: postgres
         image: postgres:13
         ports:
         - containerPort: 5432
         securityContext:
-          runAsUser: 26
+          runAsNonRoot: true
+          runAsUser: 1000
+        seccompProile:
+          type: RuntimeDefault
         env:
         - name: POSTGRES_USER
           valueFrom:
