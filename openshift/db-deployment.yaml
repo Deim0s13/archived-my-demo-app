@@ -14,11 +14,15 @@ spec:
       labels:
         app: db
     spec:
+      securityContext:
+        fsGroup: 26
       containers:
       - name: postgres
         image: postgres:13
         ports:
         - containerPort: 5432
+        securityContext:
+          runAsUser: 26
         env:
         - name: POSTGRES_USER
           valueFrom:
@@ -38,4 +42,3 @@ spec:
       volumes:
       - name: pgdata
         emptyDir: {}
-        
