@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: backend
-        image: quay.io/rh-ee-pleathen/my-demo-app_backend:latest
+        image: quay.io/yourusername/my-demo-app_backend:latest
         ports:
         - containerPort: 3000
         env:
         - name: DB_HOST
-          value: "db"
+          value: "db-deployment"  # Service name for the database
         - name: DB_USER
           valueFrom:
             secretKeyRef:
