@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: quay.io/yourusername/my-demo-app_backend:latest
+        image: quay.io/rh-ee-pleathen/my-demo-app_backend:latest
         ports:
         - containerPort: 3000
         env:

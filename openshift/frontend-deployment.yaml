@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: quay.io/yourusername/my-demo-app_frontend:latest
+        image: quay.io/rh-ee-pleathen/my-demo-app_frontend:latest
         ports:
         - containerPort: 80
