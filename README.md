@@ -1,6 +1,6 @@
 # My Demo App
 
-My Demo App is a simple web application that demonstrates basic CRUD operations using a node.js backend, a PostgreSQL database, and a React frontend (to be added). the application is containerised using Podman and managed with Docker Compose.
+My Demo App is a simple web application that demonstrates basic CRUD operations using a node.js backend, a PostgreSQL database, and a React frontend.
 
 ## Technologies Used
 
@@ -15,7 +15,7 @@ My Demo App is a simple web application that demonstrates basic CRUD operations 
 
 ### Development Environment
 
-During development, we use Podman to containerize the application and run all services locally.
+During development, we use Podman to containerise the application and run all services locally.
 
 1. **Start the application:**
 
@@ -78,15 +78,17 @@ cd my-demo-app
 
 Create a .env file in the root directory of the project with the following content:
 
+```env
 POSTGRES_USER="your-db-username"
 POSTGRES_PASSWORD="your-db-password"
 POSTGRES_DB="your-db-name"
+```
 
 3. **Start the application**
 
 User Docker Compose to build and run the contaiers:
 
-``` bash
+```bash
 podman-compose up --build
 ```
 
