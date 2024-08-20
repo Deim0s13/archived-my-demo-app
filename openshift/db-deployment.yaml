@@ -35,6 +35,6 @@ spec:
         volumeMounts:
         - name: pgdata
           mountPath: /var/lib/pgsql/data
-  volumes:
-  - name: pgdata
-    emptyDir: {}
+      volumes:
+      - name: pgdata
+        emptyDir: {}
