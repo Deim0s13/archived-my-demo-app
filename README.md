@@ -19,9 +19,22 @@ My Demo App is a simple web application that demonstrates basic CRUD operations 
 - PostgreSQL
 - **Backend and Database Services Running**: Ensure that the backend and database container are running, as the frontend relies on the API provided by the backend.
 
-### Development Environment (Podman)
+## Development Environment (Podman)
 
 During development, I have used Podman to containerise the application and run all services locally.
+
+The following outlines my Development Environment Configuration
+
+### VS Code Plugins
+
+I decided to use VS Code and to help build my-demo-app I have the below listed plugins installed.
+
+- Docker
+- YAML
+- ESLint
+- Prettier - Code Formatter
+- Python
+- GitLens
 
 ## Setup and Installation
 
