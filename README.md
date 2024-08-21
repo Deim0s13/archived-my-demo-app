@@ -58,6 +58,8 @@ POSTGRES_DB="your-db-name"
 
 ### Create a Build
 
+Before progressing to creating a build, refer to the backend and frontend README files and ensure those steps have been completed and are in place.
+
 1. **Create build:**
 
 Run the following command to create an optimised build of the React applicaiton:
