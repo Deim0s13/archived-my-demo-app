@@ -12,16 +12,21 @@ spec:
       labels:
         app: nginx
     spec:
+      initContainers:
+      - name: init-permissions
+        image: busybox
+        command: ["sh", "-c", "mkdir -p /var/cache/nginx/client_temp && chmod -R 777 /var/cache/nginx"]
+        volumeMounts:
+        - name: nginx-cache
+          mountPath: /var/cache/nginx
       containers:
       - name: nginx
         image: nginx:latest
         ports:
         - containerPort: 80
         volumeMounts:
-        - name: nginx-config-volume
-          mountPath: /etc/nginx/nginx.conf
-          subPath: nginx.conf
+        - name: nginx-cache
+          mountPath: /var/cache/nginx
       volumes:
-      - name: nginx-config-volume
-        configMap:
-          name: nginx-config
+      - name: nginx-cache
+        emptyDir: {}
